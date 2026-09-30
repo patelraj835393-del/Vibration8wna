@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow Study</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Aapka Custom Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background-color: #0f0f0f;
+            border-bottom: 1px solid #222;
+            z-index: 10; /* Ye header ko sabse upar rakhega */
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-placeholder {
+            width: 38px;
+            height: 38px;
+            background-color: #d4a373; 
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .logo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .brand-title .grow { color: #ffffff; }
+        .brand-title .study { color: #ffc107; }
+
+        .bookmark-icon {
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .bookmark-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: #a0a0a0;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* -------------------------------------------
+           MAGIC FIX: IFRAME HIDING TRICK
+        --------------------------------------------- */
+        .iframe-container {
+            flex-grow: 1;
+            width: 100%;
+            background-color: #121212;
+            position: relative;
+            overflow: hidden; /* Ye upar gaye huye part ko chupa dega */
+        }
+
+        iframe {
+            width: 100%;
+            /* Humne 70px height badha di taaki niche space khali na bache */
+            height: calc(100% + 70px); 
+            border: none;
+            position: absolute;
+            /* Yahan hum real website ko 70px upar khiska rahe hain */
+            top: -70px; 
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Aapka Grow Study Header -->
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <img src="https://cdn.phototourl.com/member/2026-09-28-d6695fcb-c23d-4143-85bc-908510ba42ab.png" alt="Logo">
+            </div>
+            
+            <div class="brand-title">
+                <span class="grow">GROW</span><span class="study">STUDY</span>
+            </div>
+        </div>
+        
+        <div class="bookmark-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Iframe Container -->
+    <div class="iframe-container">
+        <!-- Aapki original website ka link yaha daaliye -->
+        <iframe src="https://studybeepro.site/vibrante/" title="Real Website"></iframe>
+    </div>
+
+</body>
+</html>
